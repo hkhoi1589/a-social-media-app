@@ -1,0 +1,64 @@
+@use '../../scss/' as *;
+
+.form {
+	&_title {
+		margin-bottom: 45px;
+
+		font-size: $fontBig;
+		font-weight: $fontMedium;
+		text-transform: uppercase;
+
+		color: $salmon;
+	}
+
+	&_field {
+		margin-bottom: 20px;
+
+		input {
+			width: 100%;
+			padding: 5px;
+			font-size: $fontSmall;
+			font-weight: $fontLight;
+			color: $smokyBlack;
+			border-bottom: 1px solid $gray;
+		}
+	}
+
+	&_footer {
+		input {
+			cursor: pointer;
+		}
+	}
+
+	&_button {
+		text-decoration: underline;
+		font-size: $fontSmall;
+		font-weight: $fontLight;
+
+		background-color: transparent;
+		color: $salmon;
+
+		&:hover {
+			color: darken($salmon, 10%);
+		}
+	}
+
+	&_submit {
+		margin-top: 30px;
+		padding: 10px 35px;
+		border-radius: $bdrds;
+
+		font-size: $fontMed;
+		font-weight: $fontRegular;
+		text-transform: uppercase;
+
+		color: $white;
+		background-color: $salmon;
+	}
+
+	&_message {
+		margin-top: 16px;
+		color: $smokyBlack;
+		text-align: center;
+	}
+}

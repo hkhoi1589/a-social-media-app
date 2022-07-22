@@ -1,0 +1,202 @@
+@use './scss/' as *;
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: $fontFamily !important;
+}
+
+input,
+textarea,
+select,
+button {
+	outline: none;
+}
+
+input {
+	line-height: normal;
+	&:-webkit-autofill,
+	&:-webkit-autofill:focus,
+	&:-internal-autofill-selected {
+		transition: background-color 600000s 0s, color 600000s 0s;
+	}
+}
+label,
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+ul {
+	list-style-type: none;
+}
+
+.App {
+	background-color: $lightGray;
+	display: flex;
+}
+
+.flex-between-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-center-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.border {
+	border: 1px solid red;
+}
+
+.hide {
+	display: none !important;
+}
+
+.page {
+	min-height: 100vh;
+
+	&--home {
+		width: 50%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	&--other {
+		margin-left: $widthLeft;
+		padding: 0 12px;
+		width: 80%;
+	}
+
+	&--error {
+		margin-left: $widthLeft;
+		padding: 5rem 0 5rem 12px;
+		width: 80%;
+
+		div {
+			text-align: center;
+			text-transform: capitalize;
+		}
+		.link:hover {
+			color: $salmon;
+			background-color: transparent;
+		}
+	}
+}
+
+.long_text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.container {
+	width: 100%;
+	padding: $padding;
+	margin: 0 auto;
+}
+
+.link {
+	display: flex;
+	padding: $padding;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	& > article {
+		max-width: 250px;
+		min-width: 160px;
+	}
+}
+
+.background {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	&--gray {
+		background-color: $gray;
+		opacity: 0.8;
+	}
+}
+
+.btn {
+	padding: 0.5rem;
+	background-color: transparent;
+	border-radius: 0.5rem;
+
+	&:hover {
+		background-color: $salmon;
+		color: $white;
+	}
+
+	& > * {
+		display: inline;
+		margin-right: 10px;
+	}
+}
+
+@include tablet {
+	.App {
+		display: block;
+	}
+
+	.page {
+		width: 100%;
+		margin: 0 auto; // ghi de len cac margin-left
+	}
+
+	.link {
+		justify-content: center;
+	}
+}
+
+@include mobile {
+	.list {
+		& > article {
+			flex-basis: 45%;
+			min-width: 0;
+		}
+	}
+}

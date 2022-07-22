@@ -1,0 +1,148 @@
+@use '../../scss/' as *;
+
+.noti {
+	position: relative;
+	background-color: $lightGray;
+	font-size: $fontMed;
+	margin-right: 8px;
+
+	border-radius: 50%;
+	border: 1px solid $gray;
+	height: 50px;
+	width: 50px;
+
+	&--edit {
+		width: 20px;
+		height: 20px;
+		padding: 15px;
+		font-size: $fontSmall;
+		border: 1px solid transparent;
+	}
+
+	&:hover,
+	&_clicked {
+		background-color: $salmon;
+		color: $white;
+	}
+
+	.badge {
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translate(30%, -30%);
+
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+
+		color: $white;
+		background-color: $salmon;
+	}
+
+	@include tablet {
+		background-color: $white;
+		&:hover,
+		&_clicked {
+			background-color: $lightGray;
+			color: $salmon;
+		}
+
+		.badge {
+			background-color: #f56a0d;
+		}
+	}
+}
+
+.submenu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+
+	&_container {
+		&::before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid $white;
+			position: absolute;
+			top: -15px;
+			left: calc(50% + 150px);
+			transform: translateX(-50%);
+		}
+		padding: 16px 12px;
+		background: $white;
+		box-shadow: $reverseShadow;
+		position: absolute;
+		transform: translateX(-50%);
+		border-radius: $bdrds;
+		transition: all 0.2 ease-in-out;
+		width: 380px;
+		ul {
+			// for scroll
+			max-height: calc(100vh - 150px);
+			overflow-y: auto;
+		}
+	}
+
+	&_link {
+		align-items: center;
+		padding: 5px;
+		border-radius: $bdrds;
+		width: 100%;
+		min-height: 40px;
+
+		&--read {
+			background-color: $salmon;
+		}
+
+		&:hover {
+			background-color: $gray;
+			color: $white;
+		}
+	}
+
+	&_content {
+		font-size: $fontSmall;
+		overflow-y: auto;
+
+		& > p {
+			word-break: break-word;
+			text-align: center;
+			& > span {
+				display: inline-block;
+				color: $salmon;
+				max-width: 50px;
+			}
+		}
+
+		&--edit {
+			width: 100%;
+		}
+
+		&--read {
+			& > p {
+				color: $white;
+				word-break: break-word;
+				& > span {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		&_container {
+			&::before {
+				left: calc(50% + 75px);
+			}
+			transform: translateX(-50px);
+			width: 250px;
+		}
+	}
+}

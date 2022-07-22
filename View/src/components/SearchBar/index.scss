@@ -1,0 +1,24 @@
+@use '../../scss/' as *;
+
+.searchbar {
+	position: relative;
+	border-radius: $bdrds;
+	background-color: $gray;
+	margin: 16px 0;
+
+	& > i {
+		position: absolute;
+		left: 16px;
+	}
+
+	& > input {
+		flex: 1;
+		height: 40px;
+		padding: 0 16px;
+		color: $smokyBlack;
+		border-radius: $bdrds;
+		background-color: transparent;
+		font-size: $fontMed;
+		padding-left: 40px;
+	}
+}

@@ -1,0 +1,35 @@
+@use '../../scss/' as *;
+
+.alert {
+	position: fixed;
+	width: 300px;
+	top: 16px;
+	right: 20px;
+	display: block;
+	padding: 16px 30px;
+	text-align: left;
+	color: white;
+	z-index: 3;
+	animation: alert 4s ease-in-out;
+
+	&--error {
+		background: #e74c3c;
+	}
+
+	&--success {
+		background: #2ecc71;
+	}
+
+	//?
+	@include mobile {
+		left: 50%;
+		transform: translate(-50%, 0);
+		right: 0;
+	}
+}
+
+@keyframes alert {
+	to {
+		opacity: 0;
+	}
+}

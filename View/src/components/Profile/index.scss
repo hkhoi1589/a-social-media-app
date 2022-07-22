@@ -1,0 +1,37 @@
+.profile {
+	max-width: 70%;
+	height: 10%;
+	max-height: 50px;
+
+	&--large {
+		max-width: 80%;
+	}
+
+	&_img {
+		border-radius: 50%;
+		height: 32px;
+		width: 32px;
+		margin-right: 5px;
+		& > img {
+			/* Rounded border */
+			border-radius: 50%;
+
+			/* Take full size */
+			height: 100%;
+		}
+
+		&--large {
+			height: 40px;
+			width: 40px;
+		}
+
+		&--huge {
+			height: 150px;
+			width: 150px;
+		}
+	}
+
+	&_name {
+		max-width: 70%;
+	}
+}

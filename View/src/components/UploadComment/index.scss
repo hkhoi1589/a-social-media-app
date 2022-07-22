@@ -1,0 +1,39 @@
+@use '../../scss/' as *;
+
+.upload-comment {
+	width: 100%;
+	max-height: 100px;
+	padding: 16px 0;
+
+	&_content {
+		flex: 7;
+
+		& > input {
+			flex: 3;
+			height: 40px;
+			border-radius: $bdrds;
+			padding: 0 16px;
+			text-align: start;
+			color: $smokyBlack;
+			background-color: $lightGray;
+
+			&:focus {
+				border: 1px solid $smokyBlack;
+			}
+		}
+	}
+
+	&_button {
+		flex: 1;
+		border-radius: $bdrds;
+		background-color: $salmon;
+		color: $white;
+		padding: 10px;
+	}
+
+	@include mobile {
+		.profile_img {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@use '../../scss/' as *;
+
+.post {
+	position: relative;
+	background-color: $white;
+	border-radius: $bdrds;
+	margin: 1rem 0;
+	box-shadow: $reverseShadow;
+	transition: all 0.3s ease-in-out;
+	max-width: 700px;
+
+	&_container {
+		padding: $bdrds;
+		min-height: 150px;
+		padding-bottom: 0;
+	}
+
+	&_wrapper {
+		right: 0px;
+		position: absolute;
+		top: 0px;
+
+		height: 100px;
+		width: 100px;
+
+		overflow: hidden;
+	}
+
+	&_info {
+		padding: 10px 0;
+
+		button {
+			text-decoration: underline;
+			font-size: inherit;
+			background-color: inherit;
+			color: $salmon;
+		}
+	}
+
+	&_img {
+		width: 100%;
+		max-height: 300px;
+		object-fit: cover;
+	}
+
+	&_like {
+		background-color: $salmon !important;
+		color: $white;
+	}
+
+	& footer {
+		max-height: 50px;
+		padding: 0.2rem;
+		border-bottom: 1px solid $gray;
+		button {
+			width: 49%;
+		}
+	}
+}

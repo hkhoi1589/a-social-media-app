@@ -1,0 +1,35 @@
+// Breakpoint
+$maxWidth: 1280px;
+$mobileWidth: 430px;
+$tabletWidth: 780px;
+
+// Font
+$fontFamily: 'Montserrat', sans-serif;
+
+//Font size
+$fontSuperBig: 2rem;
+$fontBig: 1.5rem;
+$fontMed: 1.2rem;
+$fontSmall: 1rem;
+
+// Font weight
+$fontLight: 300;
+$fontRegular: 400;
+$fontMedium: bold;
+
+// color
+$white: #fff;
+$black: #000;
+$gray: #ccc;
+$salmon: #e32a3a;
+$smokyBlack: rgba(#222222, 0.85);
+$lightGray: #f2f5ff;
+// Background color
+$shadow: 2px 0 15px rgba($black, 0.25);
+$reverseShadow: -18px 16px 40px 0px rgba(0, 0, 0, 0.2);
+
+// other
+$bdrds: 16px;
+$padding: 16px 12px;
+$widthLeft: 22%;
+$widthRight: 22%;

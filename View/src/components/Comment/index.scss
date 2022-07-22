@@ -1,0 +1,13 @@
+@use '../../scss/' as *;
+
+.comment {
+	display: flex;
+	margin: 16px 0;
+
+	&_text {
+		flex: 3;
+		& > span {
+			color: $gray;
+		}
+	}
+}

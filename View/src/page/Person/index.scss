@@ -1,0 +1,66 @@
+@use '../../scss/' as *;
+
+.person {
+	&_container {
+		margin: 0 auto;
+	}
+
+	&_content {
+		display: flex;
+		padding: 16px 0;
+	}
+
+	&_posts {
+		width: 60%;
+	}
+
+	&_friends {
+		width: 40%;
+		margin-left: 12px;
+	}
+
+	&_friend {
+		margin-bottom: 12px;
+		& > button {
+			background-color: transparent;
+		}
+	}
+
+	&_list {
+		justify-content: flex-start;
+
+		& > a {
+			flex-basis: 45%;
+		}
+	}
+
+	@include tablet {
+		&_content {
+			flex-direction: column;
+		}
+
+		&_posts {
+			width: 100%;
+		}
+
+		&_list {
+			& > a {
+				flex-basis: 150px;
+			}
+		}
+
+		&_friends {
+			order: -1;
+			width: 100%;
+			margin: 16px 0;
+		}
+	}
+
+	@include mobile {
+		&_list {
+			& > a {
+				flex-basis: 45%;
+			}
+		}
+	}
+}

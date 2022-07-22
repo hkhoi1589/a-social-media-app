@@ -1,0 +1,44 @@
+@use '../../scss/' as *;
+
+.auth {
+	width: 100%;
+	height: 100vh;
+
+	&_container {
+		height: 100%;
+	}
+
+	&_forms {
+		border-radius: $bdrds;
+		width: 50%;
+		max-width: 600px;
+
+		background-color: $white;
+		box-shadow: $shadow;
+
+		@include mobile {
+			width: 90%;
+		}
+	}
+
+	&_login,
+	&_signup {
+		padding: 30px;
+		width: 100%;
+		animation: myAnim 1s ease 0s 1 normal none;
+	}
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotateX(-100deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
+}

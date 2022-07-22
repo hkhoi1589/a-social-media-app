@@ -1,0 +1,45 @@
+@use '../../scss/' as *;
+
+.card {
+	background-color: $white;
+	border-radius: $bdrds;
+	margin: 5px;
+	box-shadow: $reverseShadow;
+
+	&:hover {
+		box-shadow: -18px 16px 40px 0px rgba(0, 0, 0, 0.3);
+	}
+
+	& > img {
+		height: 150px;
+		width: 100%;
+		border-top-right-radius: $bdrds;
+		border-top-left-radius: $bdrds;
+	}
+
+	&_info {
+		& h2 {
+			word-wrap: break-word;
+			line-height: 2rem;
+			max-width: 150px;
+		}
+
+		& > p {
+			color: $smokyBlack;
+			max-width: 150px;
+		}
+	}
+
+	&_button {
+		margin-top: 10px;
+		width: 100%;
+		border: 2px solid $salmon;
+
+		&--gray {
+			margin-left: 10px;
+			background-color: $gray;
+			color: $smokyBlack;
+			border: 1px solid $gray !important;
+		}
+	}
+}
